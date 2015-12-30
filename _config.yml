@@ -16,11 +16,3 @@ github_username:  justinsane98
 
 # Build settings
 markdown: kramdown
-
-# Pipeline settings
-asset_pipeline:
-  bundle: true
-  compress: true
-  output_path: assets
-  display_path: # intentionally blank
-  gzip: false

@@ -55,9 +55,6 @@ GEM
       activesupport (>= 2)
       nokogiri (~> 1.4)
     i18n (0.7.0)
-    japr (0.3.2)
-      jekyll (~> 2.0)
-      liquid (~> 2.4)
     jekyll (2.4.0)
       classifier-reborn (~> 2.0)
       colorator (~> 0.1)
@@ -141,7 +138,6 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
-  japr
 
 BUNDLED WITH
    1.11.2
