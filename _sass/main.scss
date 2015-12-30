@@ -1,0 +1,77 @@
+// bower:scss
+// endbower
+@import 'config';
+@import 'reset';
+@import 'menu';
+@import 'post';
+
+// section specific
+@import 'journey';
+
+// utils
+.blur {
+  filter: blur(3px);
+}
+
+// more to admin...
+.admin {
+  box-sizing: border-box;
+  h1 {
+    color: $light-blue;
+    font-weight: 300;
+  }
+  section {
+    background: $light-blue;
+    margin: 20px;
+    padding: 20px;
+    text-align: left;
+    border-radius: 5px;
+  }
+  label {
+    color: $dark-blue;
+  }
+  label{
+    display: block;
+    margin-bottom: 20px;
+  }
+  fieldset {
+    border: none;
+    padding: 0;
+    input,
+    select {
+      margin-right: 5px;
+    }
+  }
+  input,
+  textarea,
+  button,
+  select {
+    border-radius: 5px;
+    border: none;
+  }
+  input,
+  button,
+  select {
+    height: 30px;
+  }
+  input,
+  button {
+    padding: 5px 10px;
+  }
+  select {
+    -webkit-appearance: menulist-button;
+  }
+  button {
+    background: $blue;
+    color: $white;
+  }
+  .location-json,
+  .instagram-json {
+    display: none;
+    width: 100%;
+    margin-top: 10px;
+    height: 300px;
+    padding: 10px;
+  }
+
+}

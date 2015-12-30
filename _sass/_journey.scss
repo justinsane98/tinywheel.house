@@ -1,0 +1,214 @@
+.journey {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  padding: 0 20px;
+  -webkit-overflow-scrolling: touch;
+  background-image: url('/images/path.svg');
+  background-position: 40% 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  display: inline-block;
+  width: 120px;
+  height: 132px;
+  margin: 20px 0 40px;
+  background-image: url('/images/logo.png');
+  background-position: 0 0;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  @media #{$width-414} {
+    width: 150px;
+    height: 162px;
+  }
+}
+
+.map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.sash {
+  background-color: $yellow;
+  height: $sash-height;
+  width: $sash-width;
+  border-radius: 2px;
+  display: flex;
+  @media #{$width-768} {
+    width: 66.66%;
+    margin: 0 auto;
+  }
+  @media #{$width-1024} {
+    width: calc(50% - 10px);
+  }
+}
+
+.next, .previous {
+  height: $sash-height;
+  width: $sash-height;
+  position: relative;
+  transition: background-color 50ms linear;
+  &:before {
+    content: '';
+    display: block;
+    border: $arrow-height solid transparent;
+    border-left-color: darken($red, 10%);
+    border-left-width: $arrow-height + 4;
+    position: absolute;
+    top: 50%;
+    margin-top: -9px;
+    margin-left: 13px;
+  }
+  &:hover {
+    cursor: pointer;
+    &:before {
+      border-left-color: $red;
+    }
+  }
+
+}
+.previous {
+  &:before {
+    transform: rotate(180deg);
+    margin-left: 3px;
+  }
+}
+
+.location {
+  background-color: $red;
+  color: $white;
+  line-height: $sash-height;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0 5px;
+  text-shadow: 1px 1px 0 darken($red, 10%);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 2;
+}
+
+.log, .activity {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.log {
+  @media #{$width-480} {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 10px -10px;
+  }
+  margin-bottom: 20px;
+}
+
+.activity {
+  margin: 20px 0;
+  overflow: hidden;
+  position: relative;
+  height: 0;
+  padding-bottom: 100%;
+  @media #{$width-480} {
+    width: 50%;
+    padding-bottom: calc(50% - 10px);
+    border: 10px solid transparent;
+    background-clip: padding-box;
+    margin: 0;
+  }
+  @media #{$width-768} {
+    width: 33.33%;
+    padding-bottom: calc(33.33% - 10px);
+  }
+  @media #{$width-1024} {
+    width: 25%;
+    padding-bottom: calc(25% - 10px);
+  }
+  &.instagram {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  &.blog {
+    background-color: $white;
+    background-image: url('/images/quote.svg');
+    background-position: 20px 20px;
+    background-size: 50px;
+    background-repeat: no-repeat;
+    text-align: left;
+    color: $blue;
+    font-size: 24px;
+    font-weight: 300;
+    @media #{$width-375} {
+      font-size: 30px;
+    }
+    @media #{$width-414} {
+      font-size: 34px;
+    }
+    @media #{$width-480} {
+      font-size: 18px;
+    }
+  }
+}
+
+.blog {
+  p {
+    margin: 90px 30px 0;
+  }
+}
+.expand {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: $white;
+    border-radius: 5px;
+  }
+
+  &:before {
+    width: 22px;
+    height: 2px;
+    margin-left: -10px;
+    .blog & {
+      background-color: $light-blue;
+    }
+  }
+  &:after {
+    width: 2px;
+    height: 22px;
+    margin-top: -10px;
+    .blog & {
+      background-color: $light-blue;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    // hover effects?
+  }
+}

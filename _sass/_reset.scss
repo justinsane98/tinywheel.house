@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-color: $blue;
+  width: 100%;
+  overflow: auto;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+// turn off jquery mobile "loading"
+.ui-loader {
+  display: none;
+}
+
+// disable mapbox controls
+.leaflet-control {
+  display: none;
+}

@@ -1,0 +1,154 @@
+.post {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0%;
+  height: 0%;
+  overflow-x: hidden;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+  opacity: 0;
+  z-index: 101;
+  background-color: $white;
+  text-align: left;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  header {
+    height: $header-height;
+    line-height: $header-height;
+    background: $striped-background;
+  }
+}
+
+.logomark {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 110px;
+  height:81px;
+  background: url('../images/logomark.svg')
+}
+
+.media {
+  margin: 90px 0 0;
+  img {
+      width: 100%;
+  }
+  @media #{$width-480} {
+    width: 50%;
+    float: left;
+    padding: 0 20px;
+  }
+  @media #{$width-768} {
+    padding-right: 40px;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  border-radius: 50%;
+  background-color: $light-blue;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  transition: opacity 50ms linear;
+  &:before, &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: $hamburger-width;
+    height: 2px;
+    background-color: $white;
+    margin-left: -$hamburger-width/2;
+    margin-top: -1px; // visual offset
+    border-radius: 5px;
+  }
+  &:hover {
+    cursor: pointer;
+    opacity: 0.75 !important;
+  }
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
+
+.description, .content {
+  margin: 10px 20px;
+  font-size: 14px;
+  line-height: 28px;
+  padding-bottom: 10px;
+}
+.content {
+  @media #{$width-768} {
+    width: 600px;
+    margin: 0 auto;
+  }
+  a {
+    color: $blue;
+  }
+  img {
+    width: 100%;
+  }
+  ol {
+    -webkit-padding-start: 20px;
+    li {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.description {
+  @media #{$width-480} {
+    margin: 85px 20px 0 20px;
+  }
+  @media #{$width-768} {
+    width: 40%;
+    float: left;
+  }
+}
+
+.hashtags {
+  color: lighten($black, 75%)
+}
+
+.title{
+  margin: 100px 20px 20px;
+  color: $blue;
+  font-size: 30px;
+  @media #{$width-768} {
+    width: 600px;
+    margin: 100px auto 20px;
+    font-size: 40px;
+  }
+}
+
+.subtitle {
+  margin-top: -20px;
+}
+
+.question, h2 {
+  font-weight: 300;
+  color: $blue;
+  font-size: 20px;
+  margin-bottom: 10px;
+  line-height: 24px;
+}
+
+.answer {
+  margin-bottom: 40px;
+}
+
+.spacer{
+  list-style: none;
+  height: 30px;
+}

@@ -1,0 +1,26 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: tinywheel.house
+email: justin.shearer@gmail.com
+description: the adventures of tinywheel.house
+baseurl: "/tinywheel.house" # the subpath of your site, e.g. /blog
+url: "justinsane98.github.io" # the base hostname & protocol for your site
+twitter_username: justinsane98
+github_username:  justinsane98
+
+# Build settings
+markdown: kramdown
+
+# Pipeline settings
+asset_pipeline:
+  bundle: true
+  compress: true
+  output_path: assets
+  display_path:
+  gzip: false

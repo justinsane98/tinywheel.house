@@ -1,0 +1,65 @@
+// bower:scss
+// endbower
+
+///////////////////////////////////////
+// Open Sans Font
+///////////////////////////////////////
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,600,800);
+
+///////////////////////////////////////
+// colors
+///////////////////////////////////////
+$blue:       #00D4C7;
+$light-blue: #80E9E3;
+$dark-blue:  darken($blue, 20%);
+$red:        #C5390B;
+$white:      #fff;
+$yellow:     #FED600;
+$black:      #000;
+
+$striped-background: repeating-linear-gradient(90deg, $blue, $blue 10px, $light-blue 10px, $light-blue 20px);
+$dark-striped-background: repeating-linear-gradient(90deg, $blue, $blue 10px, darken($blue, 2%)  10px, darken($blue, 2%) 20px);
+
+///////////////////////////////////////
+// dimensions
+///////////////////////////////////////
+$header-height:    10px;
+$sash-width:       100%;
+$sash-height:      40px;
+$dot-width:        50px;
+$hamburger-width:  21px;
+$hamburger-height: 12px;
+$arrow-height:     9px;
+
+///////////////////////////////////////
+// media queries
+///////////////////////////////////////
+$landscape: "(orientation: landscape)";
+$portrait:  "(orientation: portrait)";
+
+// base
+$width-320:  "screen and (min-width: 320px)";
+$width-375:  "screen and (min-width: 375px)";
+$width-414:  "screen and (min-width: 414px)";
+$width-480:  "screen and (min-width: 480px)";
+$width-568:  "screen and (min-width: 568px)";
+$width-667:  "screen and (min-width: 667px)";
+$width-736:  "screen and (min-width: 736px)";
+$width-768:  "screen and (min-width: 768px)";
+$width-1024: "screen and (min-width: 1024px)";
+$width-1224: "screen and (min-width: 1224px)";
+$width-1400: "screen and (min-width: 1400px)";
+
+// portait
+$width-320-p:  $width-320 + " and " + $portrait;
+$width-375-p:  $width-375 + " and " + $portrait;
+$width-414-p:  $width-414 + " and " + $portrait;
+$width-480-p:  $width-480 + " and " + $portrait;
+$width-768-p:  $width-768 + " and " + $portrait;
+
+// landscape
+$width-480-l:  $width-480 + " and " + $landscape;
+$width-568-l:  $width-568 + " and " + $landscape;
+$width-667-l:  $width-667 + " and " + $landscape;
+$width-736-l:  $width-736 + " and " + $landscape;
+$width-768-l:  $width-768 + " and " + $landscape;
