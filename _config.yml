@@ -9,7 +9,7 @@
 title: tinywheel.house
 email: justin.shearer@gmail.com
 description: the adventures of tinywheel.house
-baseurl: "/tinywheel.house" # the subpath of your site, e.g. /blog
+baseurl:  # the subpath of your site, e.g. /blog
 url: "justinsane98.github.io" # the base hostname & protocol for your site
 twitter_username: justinsane98
 github_username:  justinsane98

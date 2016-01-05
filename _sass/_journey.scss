@@ -12,7 +12,7 @@
   z-index: 1;
   padding: 0 20px;
   -webkit-overflow-scrolling: touch;
-  background-image: url('/images/path.svg');
+  background-image: url('../images/path.svg');
   background-position: 40% 0;
   background-size: cover;
   background-repeat: no-repeat;
@@ -23,7 +23,7 @@
   width: 120px;
   height: 132px;
   margin: 20px 0 40px;
-  background-image: url('/images/logo.png');
+  background-image: url('../images/logo.png');
   background-position: 0 0;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -149,7 +149,7 @@
   }
   &.blog {
     background-color: $white;
-    background-image: url('/images/quote.svg');
+    background-image: url('../images/quote.svg');
     background-position: 20px 20px;
     background-size: 50px;
     background-repeat: no-repeat;

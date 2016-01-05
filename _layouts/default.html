@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>tinywheel.house</title>
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet' />
   </head>
   <body>
@@ -14,14 +14,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
     <script src='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.js'></script>
-    <script src="vendor/modernizr.js"></script>
-    <script src="vendor/velocity.js"></script>
-    <script src="vendor/velocity.ui.js"></script>
-    <script src="scripts/data.js"></script>
-    <script src="scripts/main.js"></script>
-    <script src="scripts/animation.js"></script>
-    <script src="scripts/events.js"></script>
-
+    <script src="{{ "/vendor/modernizr.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/vendor/velocity.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/vendor/velocity.ui.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/scripts/data.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/scripts/main.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/scripts/animation.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/scripts/events.js" | prepend: site.baseurl }}"></script>
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
       function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
