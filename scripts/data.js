@@ -49,6 +49,11 @@ TWH.data = {
       'coordinates': [32.2700945, -106.80083760000002],
       'activity': [
         {
+          'type': 'blog',
+          'title': 'Ode to our RV convection oven',
+          'content': '<p>One of my favorite kitchen appliances that came installed on our Bounder is a Whirlpool microwave/convection oven. Let me tell you, when you have a toddler and a choice between using a gas oven at baby height or convection oven at adult shoulder height, using the convection oven is a no brainer! Fleetwood really nailed it perfectly in the installation placement too- it’s right over the stove and directly under the main house vent. While the convection oven uses a bit less heat than the gas oven, it still puts out a lot of heat and warms the RV up quickly on a cold morning. Additionally, you can use metal in the microwave during the convection, so no need to run out and get all new glass dishes, unless you want to, of course!</p><p>I’ve baked all kinds of things in the convection oven-</p><ul><li>Breads</li><li>Cinnamon Rolls</li><li>Pizza</li><li>Cookies</li><li>Cake</li><li>Pies</li><li>Quiches</li><li>Biscuits</li><li>Muffins</li></ul><p>This little oven is just so awesome! While it has an auto setting for baking, I usually use the manual settings to get just the perfect temperature. Additionally, you have a choice between using a round rack that places right on the glass turntable, placing directly on the glass turntable, or putting in a square rack that you can place large square dishes on. The round rack is great for getting food evenly baked- I love it for baking bread!</p><p>Ok, that’s enough of my love letter to my microwave. :)</p>'
+        },
+        {
           'type': 'instagram',
           'thumbnail': 'https://scontent.cdninstagram.com/hphotos-xft1/t51.2885-15/s150x150/e35/12407391_144492402590815_1221312803_n.jpg',
           'media': 'https://scontent.cdninstagram.com/hphotos-xft1/t51.2885-15/s640x640/sh0.08/e35/12407391_144492402590815_1221312803_n.jpg',
