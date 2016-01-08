@@ -46,6 +46,11 @@ TWH.dom.previous.on('tap', function(){
   ga('send', 'pageview', TWH.tmp.location.hash);
 });
 
+TWH.dom.location.on('tap', function(){
+  $('.location-list').toggleClass('active');
+  // add event tracking
+});
+
 
 TWH.dom.journey.on('scroll', function() {
   if (this.scrollTop > 125) {
@@ -56,7 +61,6 @@ TWH.dom.journey.on('scroll', function() {
   } else {
     TWH.dom.journey.removeClass('fixed');
   }
-
 });
 
 
@@ -73,4 +77,10 @@ TWH.dom.log.on('tap', '.expand', function() {
     TWH.dom.journey.css('overflow-y', 'hidden');
     TWH.openPostSequence();
   }
+});
+
+TWH.dom.sash.on('tap', '.listed-location', function() {
+  TWH.tmp.location.id = $(this).index();
+  TWH.selectLocation();
+  $('.location-list').removeClass('active');
 });

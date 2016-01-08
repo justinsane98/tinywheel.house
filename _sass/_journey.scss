@@ -48,6 +48,7 @@
   width: $sash-width;
   border-radius: 2px;
   display: flex;
+  position: relative;
   @media #{$width-768} {
     width: 66.66%;
     margin: 0 auto;
@@ -103,6 +104,36 @@
   overflow: hidden;
   text-overflow: ellipsis;
   flex: 2;
+}
+
+.location-list {
+  display: none;
+  position: absolute;
+  top: $sash-height + 1;
+  left: $sash-height;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: calc(100% - 80px);
+  z-index: 2;
+  background-color: $red;
+  border-radius: 2px;
+  height: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-size: 14px;
+  &.active {
+    display: block;
+  }
+  li {
+    list-style: none;
+    color: $white;
+    height: $sash-height;
+    line-height: $sash-height;
+    &:nth-child(odd){
+      background-color: rgba($white, 0.1)
+    }
+  }
 }
 
 .log, .activity {

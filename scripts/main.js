@@ -24,6 +24,7 @@ TWH.init = function() {
   TWH.mapInit();
   TWH.checkHash();
   TWH.setLocation();
+  TWH.listLocations();
   TWH.setMapLocation();
   TWH.setActivities();
 };
@@ -110,7 +111,6 @@ TWH.nextLocation = function() {
 
 TWH.previousLocation = function() {
   if (TWH.tmp.location.id !== TWH.data.location.length - 1 && $('.open').length === 0 && $('.max').length === 0) {
-
     // load previous location if possible
     $.Velocity.RunSequence(TWH.swipeLeftSequence);
     TWH.tmp.location.id += 1;
@@ -120,6 +120,24 @@ TWH.previousLocation = function() {
     TWH.setMapLocation();
 
   }
+};
+
+TWH.selectLocation = function() {
+  TWH.writeHistory();
+  TWH.setLocation();
+  TWH.setActivities();
+  TWH.setMapLocation();
+};
+
+TWH.listLocations = function() {
+  var list = $('<ul/>').addClass('location-list');
+
+  $.each(TWH.data.location, function(i, location){
+    var li = $('<li/>').addClass('listed-location').text(location.city + ', ' + location.state);
+    list.append(li);
+  });
+
+  TWH.dom.sash.append(list);
 };
 
 TWH.setMapLocation = function(){
