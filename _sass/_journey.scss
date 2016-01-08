@@ -80,6 +80,12 @@
       border-left-color: $red;
     }
   }
+  &.disabled {
+    &:before,
+    &:after {
+      opacity: 0.25;
+    }
+  }
 
 }
 .previous {

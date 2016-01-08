@@ -25,6 +25,7 @@ TWH.init = function() {
   TWH.checkHash();
   TWH.setLocation();
   TWH.listLocations();
+  TWH.disableControls();
   TWH.setMapLocation();
   TWH.setActivities();
 };
@@ -102,10 +103,7 @@ TWH.nextLocation = function() {
     // load next location if possible
     $.Velocity.RunSequence(TWH.swipeRightSequence);
     TWH.tmp.location.id -= 1;
-    TWH.writeHistory();
-    TWH.setLocation();
-    TWH.setActivities();
-    TWH.setMapLocation();
+    TWH.selectLocation();
   }
 };
 
@@ -114,17 +112,24 @@ TWH.previousLocation = function() {
     // load previous location if possible
     $.Velocity.RunSequence(TWH.swipeLeftSequence);
     TWH.tmp.location.id += 1;
-    TWH.writeHistory();
-    TWH.setLocation();
-    TWH.setActivities();
-    TWH.setMapLocation();
+    TWH.selectLocation();
+  }
+};
 
+TWH.disableControls = function(){
+  $('.disabled').removeClass('disabled');
+  if(TWH.tmp.location.id === 0){
+    TWH.dom.next.addClass('disabled');
+  }
+  if(TWH.tmp.location.id === TWH.data.location.length - 1) {
+    TWH.dom.previous.addClass('disabled');
   }
 };
 
 TWH.selectLocation = function() {
   TWH.writeHistory();
   TWH.setLocation();
+  TWH.disableControls();
   TWH.setActivities();
   TWH.setMapLocation();
 };
