@@ -4,11 +4,14 @@
 - animation profiling
 - refactor geolocation to use mapbox versus gmaps
 - deprecate thumbnail from data
-- css/js cleanup
 - page load optimizations
 
 # New Features
 - twitter card / facebook share / pinterest pin
 - add date to each activity
-- add dropdown for location selection
-- disable next/previous buttons when at ends of array
+
+# Project setup
+- clone repo `git clone https://github.com/justinsane98/tinywheel.house.git`
+- Install Jekyll `gem install jekyll`
+- start server `jekyll serve` `http://localhost:4000`
+- stop server `jekyll stop`
